@@ -23,3 +23,16 @@ C:\Users\Mateusz\Desktop\Manipulatory\Manipulatory\obj\Debug\Manipulatory.Proper
 C:\Users\Mateusz\Desktop\Manipulatory\Manipulatory\obj\Debug\Manipulatory.csproj.GenerateResource.Cache
 C:\Users\Mateusz\Desktop\Manipulatory\Manipulatory\bin\Debug\Manipulatory.exe
 C:\Users\Mateusz\Desktop\Manipulatory\Manipulatory\bin\Debug\Manipulatory.pdb
+C:\Users\Mateusz\OneDrive\Documents\roboty_przemysłowe\Manipulatory\Manipulatory\bin\Debug\Manipulatory.exe.config
+C:\Users\Mateusz\OneDrive\Documents\roboty_przemysłowe\Manipulatory\Manipulatory\obj\Debug\Manipulatory.exe
+C:\Users\Mateusz\OneDrive\Documents\roboty_przemysłowe\Manipulatory\Manipulatory\obj\Debug\Manipulatory.pdb
+C:\Users\Mateusz\OneDrive\Documents\roboty_przemysłowe\Manipulatory\Manipulatory\obj\Debug\Manipulatory.csprojResolveAssemblyReference.cache
+C:\Users\Mateusz\OneDrive\Documents\roboty_przemysłowe\Manipulatory\Manipulatory\obj\Debug\MainWindow.baml
+C:\Users\Mateusz\OneDrive\Documents\roboty_przemysłowe\Manipulatory\Manipulatory\obj\Debug\MainWindow.g.cs
+C:\Users\Mateusz\OneDrive\Documents\roboty_przemysłowe\Manipulatory\Manipulatory\obj\Debug\App.g.cs
+C:\Users\Mateusz\OneDrive\Documents\roboty_przemysłowe\Manipulatory\Manipulatory\obj\Debug\Manipulatory_MarkupCompile.cache
+C:\Users\Mateusz\OneDrive\Documents\roboty_przemysłowe\Manipulatory\Manipulatory\obj\Debug\Manipulatory.g.resources
+C:\Users\Mateusz\OneDrive\Documents\roboty_przemysłowe\Manipulatory\Manipulatory\obj\Debug\Manipulatory.Properties.Resources.resources
+C:\Users\Mateusz\OneDrive\Documents\roboty_przemysłowe\Manipulatory\Manipulatory\obj\Debug\Manipulatory.csproj.GenerateResource.Cache
+C:\Users\Mateusz\OneDrive\Documents\roboty_przemysłowe\Manipulatory\Manipulatory\bin\Debug\Manipulatory.exe
+C:\Users\Mateusz\OneDrive\Documents\roboty_przemysłowe\Manipulatory\Manipulatory\bin\Debug\Manipulatory.pdb
