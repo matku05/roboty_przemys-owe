@@ -136,14 +136,14 @@ namespace Manipulatory
             Sp.Write("GO \r");
         }
         TcpListener server = null;
-        public  void bt_SERVER_Click(object sender, RoutedEventArgs e)
+        public void bt_SERVER_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 
                 // Set the TcpListener on port 13000.
                 Int32 port = 13000;
-                IPAddress localAddr = IPAddress.Parse("127.0.0.1");
+                IPAddress localAddr = IPAddress.Parse(Variables.ip_addr);
 
                 // TcpListener server = new TcpListener(port);
                 server = new TcpListener(localAddr, port);
@@ -158,12 +158,12 @@ namespace Manipulatory
                 // Enter the listening loop.
                 while (true)
                 {
-                    Console.Write("Waiting for a connection... ");
+
 
                     // Perform a blocking call to accept requests.
                     // You could also user server.AcceptSocket() here.
                     TcpClient client = server.AcceptTcpClient();
-                    Console.WriteLine("Connected!");
+                    Console.Write("Connected!");
 
                     data = null;
 
@@ -197,11 +197,6 @@ namespace Manipulatory
             {
                 Console.WriteLine("SocketException: {0}", xe);
             }
-            finally
-            {
-                // Stop listening for new clients.
-                server.Stop();
-            }
 
 
             Console.WriteLine("\nHit enter to continue...");
@@ -212,7 +207,8 @@ namespace Manipulatory
 
         public void bt_server_stop_Click(object sender, RoutedEventArgs e)
         {
-            
+            // Stop listening for new clients.
+            server.Stop();
         }
     }
 }
