@@ -44,7 +44,7 @@
             </TabItem>
             <TabItem Header="Android">
                 <Grid Background="#FFE5E5E5">
-                    <TextBox x:Name="tb_connect_android" HorizontalAlignment="Left" Height="108" Margin="323,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232"/>
+                    <TextBox x:Name="tb_connect_android" HorizontalAlignment="Left" Height="196" Margin="68,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="487" TextChanged="tb_connect_android_TextChanged"/>
                     <Button x:Name="bt_SERVER" Content="START SERVER " HorizontalAlignment="Left" Height="58" Margin="304,362,0,0" VerticalAlignment="Top" Width="251" Click="bt_SERVER_Click"/>
                     <ComboBox x:Name="CB_ip_adress" HorizontalAlignment="Left" Height="42" Margin="323,75,0,0" VerticalAlignment="Top" Width="202">
                         <ComboBoxItem>89.79.51.236</ComboBoxItem>

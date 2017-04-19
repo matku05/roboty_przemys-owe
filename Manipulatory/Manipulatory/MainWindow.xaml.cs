@@ -36,9 +36,6 @@ namespace Manipulatory
         public static string tryb = "";
 
         public static bool wasd = false;
-
-
-
     }
     public partial class MainWindow : Window
     {
@@ -135,81 +132,67 @@ namespace Manipulatory
         {
             Sp.Write("GO \r");
         }
-        TcpListener server = null;
-        public void bt_SERVER_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                
-                // Set the TcpListener on port 13000.
-                Int32 port = 13000;
-                IPAddress localAddr = IPAddress.Parse(Variables.ip_addr);
-
-                // TcpListener server = new TcpListener(port);
-                server = new TcpListener(localAddr, port);
-
-                // Start listening for client requests.
-                server.Start();
-
-                // Buffer for reading data
-                Byte[] bytes = new Byte[256];
-                String data = null;
-
-                // Enter the listening loop.
-                while (true)
-                {
-
-
-                    // Perform a blocking call to accept requests.
-                    // You could also user server.AcceptSocket() here.
-                    TcpClient client = server.AcceptTcpClient();
-                    Console.Write("Connected!");
-
-                    data = null;
-
-                    // Get a stream object for reading and writing
-                    NetworkStream stream = client.GetStream();
-
-                    int i;
-
-                    // Loop to receive all the data sent by the client.
-                    while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
-                    {
-                        // Translate data bytes to a ASCII string.
-                        data = System.Text.Encoding.ASCII.GetString(bytes, 0, i);
-                        Console.WriteLine("Received: {0}", data);
-
-                        // Process the data sent by the client.
-                        data = data.ToUpper();
-
-                        byte[] msg = System.Text.Encoding.ASCII.GetBytes(data);
-
-                        // Send back a response.
-                        stream.Write(msg, 0, msg.Length);
-                        Console.WriteLine("Sent: {0}", data);
-                    }
-
-                    // Shutdown and end connection
-                    client.Close();
-                }
-            }
-            catch (SocketException xe)
-            {
-                Console.WriteLine("SocketException: {0}", xe);
-            }
-
-
-            Console.WriteLine("\nHit enter to continue...");
-            Console.Read();
-
-
-        }
 
         public void bt_server_stop_Click(object sender, RoutedEventArgs e)
+            {
+                Thread tcpServerRunThread = new Thread(new ThreadStart(TcpServerRun));
+                tcpServerRunThread.Start();
+            }
+
+        private void TcpServerRun()
         {
-            // Stop listening for new clients.
-            server.Stop();
+            TcpListener tcpLisner = new TcpListener(IPAddress.Any, 5004);
+            tcpLisner.Start();
+            updateUI("listening");
+            while (true)
+            {
+                TcpClient client = tcpLisner.AcceptTcpClient();
+                updateUI("connected");
+                Thread tcpHandlerThread = new Thread(new ParameterizedThreadStart(tcpHandler));
+                tcpHandlerThread.Start(client);
+            }
+
+
         }
+
+        private void tcpHandler(object client)
+        {
+            TcpClient mClient = (TcpClient)client;
+            NetworkStream stream = mClient.GetStream();
+            byte[] message = new byte[1024];
+            stream.Read(message, 0, message.Length);
+            updateUI("new message = " + Encoding.ASCII.GetString(message));
+            stream.Close();
+            mClient.Close();
+
+        }
+
+        private void updateUI(string s)
+        {
+            tb_connect_android.Dispatcher.Invoke(
+               DispatcherPriority.Normal,
+               new Action(
+                   () =>
+                   {
+                       tb_connect_android.AppendText(s + System.Environment.NewLine);
+                   }
+               )
+           );
+        }
+
+
+        private void bt_SERVER_Click(object sender, RoutedEventArgs e)
+        {
+            //TcpServerRun();
+            Thread tcpServerRunThread = new Thread(new ThreadStart(TcpServerRun));
+            tcpServerRunThread.Start();
+        }
+
+        private void tb_connect_android_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
     }
 }
 
