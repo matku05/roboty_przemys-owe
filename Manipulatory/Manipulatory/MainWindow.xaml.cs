@@ -29,39 +29,25 @@ namespace Manipulatory
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     /// 
-    public class Variables
-    {
-        public static string ip_addr = "";
-        public static int port;
-        public static string tryb = "";
 
-        public static bool wasd = false;
-    }
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-            
         }
-
-        public void zmienne()
-        {
-            Variables.ip_addr = CB_ip_adress.Text;
-      
-        }
+        public TcpClient mClient;
+        public TcpClient client;
+        public NetworkStream stream;
+        public TcpListener tcpListener;
         public SerialPort Sp;
-        public delegate void NoArgDelegate();
-
-       
-
-
 
         // Połączenie z robotem
 
         private void bt_connect_Click_1(object sender, RoutedEventArgs e)
         {
-            try{
+            try
+            {
                 Sp = new SerialPort();
                 Sp.Parity = Parity.Even;
                 Sp.StopBits = StopBits.Two;
@@ -70,10 +56,9 @@ namespace Manipulatory
                 tb_status.Text = cb_nr_port.Text;
                 Sp.Open();
                 tb_status.Text = "Connection established";
-
-                }
-            catch(Exception x){
-
+            }
+            catch (Exception x)
+            {
                 MessageBox.Show(x.Message.ToString());
             }
         }
@@ -82,6 +67,11 @@ namespace Manipulatory
 
 
         private void bt_disconnect_Click_1(object sender, RoutedEventArgs e)
+        {
+            Sp.Close();
+        }
+
+        private void bt_disconnect2_Click(object sender, RoutedEventArgs e)
         {
             Sp.Close();
         }
@@ -123,48 +113,49 @@ namespace Manipulatory
             Sp.Write("GC \r");
         }
 
-        private void bt_disconnect2_Click(object sender, RoutedEventArgs e)
-        {
-            Sp.Close();
-        }
-
-        private void bt_go_Click(object sender, RoutedEventArgs e)
-        {
-            Sp.Write("GO \r");
-        }
+         
+        
+        /// obsługa serwera
+        
+        //rozłączanie serwera 
 
         public void bt_server_stop_Click(object sender, RoutedEventArgs e)
-            {
-                Thread tcpServerRunThread = new Thread(new ThreadStart(TcpServerRun));
-                tcpServerRunThread.Start();
-            }
+        {
+            // destrukcja klienta
+            mClient.Close();
+            tcpListener.Stop();
+            // zamknięcie strumienia
+            //stream.Close();
+            // mClient = null;
+        }
+
+        //inicjalizacja serwera 
 
         private void TcpServerRun()
         {
-            TcpListener tcpLisner = new TcpListener(IPAddress.Any, 5004);
-            tcpLisner.Start();
+            TcpListener tcpListener = new TcpListener(IPAddress.Any, 5004);
+            tcpListener.Start();
             updateUI("listening");
             while (true)
             {
-                TcpClient client = tcpLisner.AcceptTcpClient();
+                client = tcpListener.AcceptTcpClient();
                 updateUI("connected");
                 Thread tcpHandlerThread = new Thread(new ParameterizedThreadStart(tcpHandler));
                 tcpHandlerThread.Start(client);
             }
-
-
         }
+
+        // otwarcie strumienia i odbiór ramki
 
         private void tcpHandler(object client)
         {
-            TcpClient mClient = (TcpClient)client;
-            NetworkStream stream = mClient.GetStream();
+            mClient = (TcpClient)client;
+            stream = mClient.GetStream();
             byte[] message = new byte[1024];
             stream.Read(message, 0, message.Length);
             updateUI("new message = " + Encoding.ASCII.GetString(message));
             stream.Close();
             mClient.Close();
-
         }
 
         private void updateUI(string s)
@@ -180,10 +171,8 @@ namespace Manipulatory
            );
         }
 
-
         private void bt_SERVER_Click(object sender, RoutedEventArgs e)
         {
-            //TcpServerRun();
             Thread tcpServerRunThread = new Thread(new ThreadStart(TcpServerRun));
             tcpServerRunThread.Start();
         }

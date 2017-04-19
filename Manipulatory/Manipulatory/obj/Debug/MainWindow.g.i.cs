@@ -40,7 +40,7 @@ namespace Manipulatory {
     public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 8 "..\..\MainWindow.xaml"
+        #line 9 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid lb_nr_portu;
         
@@ -48,7 +48,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 9 "..\..\MainWindow.xaml"
+        #line 10 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bt_connect;
         
@@ -56,7 +56,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 10 "..\..\MainWindow.xaml"
+        #line 11 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bt_disconnect;
         
@@ -64,7 +64,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 11 "..\..\MainWindow.xaml"
+        #line 12 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox cb_nr_port;
         
@@ -72,7 +72,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 24 "..\..\MainWindow.xaml"
+        #line 25 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox tb_status;
         
@@ -80,7 +80,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 34 "..\..\MainWindow.xaml"
+        #line 35 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bt_x_left;
         
@@ -88,7 +88,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 35 "..\..\MainWindow.xaml"
+        #line 36 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bt_x_right;
         
@@ -96,7 +96,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 36 "..\..\MainWindow.xaml"
+        #line 37 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bt_y_left;
         
@@ -104,7 +104,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 37 "..\..\MainWindow.xaml"
+        #line 38 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bt_y_right;
         
@@ -112,7 +112,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 38 "..\..\MainWindow.xaml"
+        #line 39 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bt_z_left;
         
@@ -120,7 +120,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 39 "..\..\MainWindow.xaml"
+        #line 40 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bt_z_right;
         
@@ -128,7 +128,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 40 "..\..\MainWindow.xaml"
+        #line 41 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bt_gc;
         
@@ -136,7 +136,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 41 "..\..\MainWindow.xaml"
+        #line 42 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bt_go;
         
@@ -144,7 +144,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 42 "..\..\MainWindow.xaml"
+        #line 43 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bt_disconnect2;
         
@@ -152,7 +152,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 47 "..\..\MainWindow.xaml"
+        #line 48 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox tb_connect_android;
         
@@ -160,7 +160,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 48 "..\..\MainWindow.xaml"
+        #line 49 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bt_SERVER;
         
@@ -168,7 +168,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 49 "..\..\MainWindow.xaml"
+        #line 50 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox CB_ip_adress;
         
@@ -176,7 +176,7 @@ namespace Manipulatory {
         #line hidden
         
         
-        #line 54 "..\..\MainWindow.xaml"
+        #line 55 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bt_server_stop;
         
@@ -219,7 +219,7 @@ namespace Manipulatory {
             case 2:
             this.bt_connect = ((System.Windows.Controls.Button)(target));
             
-            #line 9 "..\..\MainWindow.xaml"
+            #line 10 "..\..\MainWindow.xaml"
             this.bt_connect.Click += new System.Windows.RoutedEventHandler(this.bt_connect_Click_1);
             
             #line default
@@ -228,7 +228,7 @@ namespace Manipulatory {
             case 3:
             this.bt_disconnect = ((System.Windows.Controls.Button)(target));
             
-            #line 10 "..\..\MainWindow.xaml"
+            #line 11 "..\..\MainWindow.xaml"
             this.bt_disconnect.Click += new System.Windows.RoutedEventHandler(this.bt_disconnect_Click_1);
             
             #line default
@@ -243,7 +243,7 @@ namespace Manipulatory {
             case 6:
             this.bt_x_left = ((System.Windows.Controls.Button)(target));
             
-            #line 34 "..\..\MainWindow.xaml"
+            #line 35 "..\..\MainWindow.xaml"
             this.bt_x_left.Click += new System.Windows.RoutedEventHandler(this.bt_x_left_Click);
             
             #line default
@@ -252,7 +252,7 @@ namespace Manipulatory {
             case 7:
             this.bt_x_right = ((System.Windows.Controls.Button)(target));
             
-            #line 35 "..\..\MainWindow.xaml"
+            #line 36 "..\..\MainWindow.xaml"
             this.bt_x_right.Click += new System.Windows.RoutedEventHandler(this.bt_x_right_Click);
             
             #line default
@@ -261,7 +261,7 @@ namespace Manipulatory {
             case 8:
             this.bt_y_left = ((System.Windows.Controls.Button)(target));
             
-            #line 36 "..\..\MainWindow.xaml"
+            #line 37 "..\..\MainWindow.xaml"
             this.bt_y_left.Click += new System.Windows.RoutedEventHandler(this.bt_y_left_Click);
             
             #line default
@@ -270,7 +270,7 @@ namespace Manipulatory {
             case 9:
             this.bt_y_right = ((System.Windows.Controls.Button)(target));
             
-            #line 37 "..\..\MainWindow.xaml"
+            #line 38 "..\..\MainWindow.xaml"
             this.bt_y_right.Click += new System.Windows.RoutedEventHandler(this.bt_y_right_Click);
             
             #line default
@@ -279,7 +279,7 @@ namespace Manipulatory {
             case 10:
             this.bt_z_left = ((System.Windows.Controls.Button)(target));
             
-            #line 38 "..\..\MainWindow.xaml"
+            #line 39 "..\..\MainWindow.xaml"
             this.bt_z_left.Click += new System.Windows.RoutedEventHandler(this.bt_z_left_Click);
             
             #line default
@@ -288,7 +288,7 @@ namespace Manipulatory {
             case 11:
             this.bt_z_right = ((System.Windows.Controls.Button)(target));
             
-            #line 39 "..\..\MainWindow.xaml"
+            #line 40 "..\..\MainWindow.xaml"
             this.bt_z_right.Click += new System.Windows.RoutedEventHandler(this.bt_z_right_Click);
             
             #line default
@@ -297,7 +297,7 @@ namespace Manipulatory {
             case 12:
             this.bt_gc = ((System.Windows.Controls.Button)(target));
             
-            #line 40 "..\..\MainWindow.xaml"
+            #line 41 "..\..\MainWindow.xaml"
             this.bt_gc.Click += new System.Windows.RoutedEventHandler(this.bt_gc_Click);
             
             #line default
@@ -306,7 +306,7 @@ namespace Manipulatory {
             case 13:
             this.bt_go = ((System.Windows.Controls.Button)(target));
             
-            #line 41 "..\..\MainWindow.xaml"
+            #line 42 "..\..\MainWindow.xaml"
             this.bt_go.Click += new System.Windows.RoutedEventHandler(this.bt_go_Click);
             
             #line default
@@ -315,7 +315,7 @@ namespace Manipulatory {
             case 14:
             this.bt_disconnect2 = ((System.Windows.Controls.Button)(target));
             
-            #line 42 "..\..\MainWindow.xaml"
+            #line 43 "..\..\MainWindow.xaml"
             this.bt_disconnect2.Click += new System.Windows.RoutedEventHandler(this.bt_disconnect2_Click);
             
             #line default
@@ -324,7 +324,7 @@ namespace Manipulatory {
             case 15:
             this.tb_connect_android = ((System.Windows.Controls.TextBox)(target));
             
-            #line 47 "..\..\MainWindow.xaml"
+            #line 48 "..\..\MainWindow.xaml"
             this.tb_connect_android.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.tb_connect_android_TextChanged);
             
             #line default
@@ -333,7 +333,7 @@ namespace Manipulatory {
             case 16:
             this.bt_SERVER = ((System.Windows.Controls.Button)(target));
             
-            #line 48 "..\..\MainWindow.xaml"
+            #line 49 "..\..\MainWindow.xaml"
             this.bt_SERVER.Click += new System.Windows.RoutedEventHandler(this.bt_SERVER_Click);
             
             #line default
@@ -345,7 +345,7 @@ namespace Manipulatory {
             case 18:
             this.bt_server_stop = ((System.Windows.Controls.Button)(target));
             
-            #line 54 "..\..\MainWindow.xaml"
+            #line 55 "..\..\MainWindow.xaml"
             this.bt_server_stop.Click += new System.Windows.RoutedEventHandler(this.bt_server_stop_Click);
             
             #line default

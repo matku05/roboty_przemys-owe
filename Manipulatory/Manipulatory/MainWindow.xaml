@@ -4,6 +4,7 @@
         Title="MainWindow" Height="755.255" Width="914.582">
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="716" VerticalAlignment="Top" Width="908">
+            
             <TabItem Header="Connection">
                 <Grid x:Name="lb_nr_portu" Background="#FFE5E5E5" Margin="0,-11,-0.4,10.2">
                     <Button x:Name="bt_connect" Content="CONNECT" HorizontalAlignment="Left" Height="80" Margin="58,265,0,0" VerticalAlignment="Top" Width="191" Click="bt_connect_Click_1"/>
